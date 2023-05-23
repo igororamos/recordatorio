@@ -61,7 +61,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ $link ==  'relatorio'?'active':'' }}" href="/relatorio">
+                        <a class="nav-link {{ $link ==  'relatorio'?'active':'' }}" href="/resultados/select">
                             <span>Relatório
                             </span>
                         </a>
@@ -91,6 +91,15 @@
                                         echo 'Evento Psicológico';
                                         break;
                                      case 'cefaleia':
+                                        echo 'Cefaleia';
+                                        break;
+                                    case 'resultados/'.Request::segment(2):
+                                        echo 'Alimentação';
+                                        break;
+                                     case 'resultados/'.Request::segment(2):
+                                        echo 'Evento Psicológico';
+                                        break;
+                                     case 'resultados/'.Request::segment(2):
                                         echo 'Cefaleia';
                                         break;
                                     

@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 use App\Models\Cefaleia;
 class CefaleiaController extends Controller
 {
+    public function index(){
+        $cefaleia = Cefaleia::all();
+
+        return view('/resultados/cefaleia_resultados', ['cefaleia'=> $cefaleia]);
+    }
+
     public function store(Request $request){
         $cefaleia = new Cefaleia;
 
@@ -17,7 +23,7 @@ class CefaleiaController extends Controller
         
         $cefaleia->save();
 
-        return redirect('/');
+        return redirect('/resultados/cefaleia_resultados');
 
     }
 }

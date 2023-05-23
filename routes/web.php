@@ -25,7 +25,15 @@ Route::get('/psi', [EventController::class, 'psi']);
 
 Route::get('/cefaleia', [EventController::class, 'cefaleia']);
 
+Route::post('/resultados/relatorio', [EventController::class, 'relatorio']);
+Route::get('/resultados/select', [EventController::class, 'select']);
+
 //Rotas de POST dos formulários;
 Route::post("/alimentacao", [AlimentController::class,'store']);
+Route::get("/resultados/alimentacao_resultados", [AlimentController::class,'index']);
+
 Route::post("/psi", [PsiController::class,'store']);
+Route::get("/resultados/psi_resultados", [PsiController::class,'index']);
+
 Route::post("/cefaleia", [CefaleiaController::class,'store']);
+Route::get("/resultados/cefaleia_resultados", [CefaleiaController::class,'index']);

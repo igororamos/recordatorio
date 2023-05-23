@@ -18,4 +18,11 @@ class EventController extends Controller
     public function cefaleia(){
         return view('cefaleia');
     }
+    
+     public function relatorio(){
+        return view('/resultados/relatorio');
+    } 
+    public function select(){
+        return view('/resultados/select');
+    }
 }

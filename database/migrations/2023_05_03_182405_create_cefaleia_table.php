@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('tipo');
             $table->integer('intensidade');
-            $table->json('fatores_desencadeantes');
-            $table->json('sintomas');
+            $table->json('fatores_desencadeantes')->nullable(true);
+            $table->json('sintomas')->nullable(true);
             $table->dateTime('data');
             $table->timestamps();
         });

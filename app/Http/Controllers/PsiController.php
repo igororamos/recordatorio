@@ -6,6 +6,13 @@ use Illuminate\Http\Request;
 use App\Models\Psi;
 class PsiController extends Controller
 {
+
+    public function index(){
+        $psi = Psi::all();
+
+        return view('/resultados/psi_resultados', ['psi'=> $psi]);
+    }
+
     public function store(Request $request){
         $psi = new Psi;
         
@@ -14,7 +21,7 @@ class PsiController extends Controller
         
         $psi->save();
 
-        return redirect('/');
+        return redirect('/resultados/psi_resultados');
 
     }
 }

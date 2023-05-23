@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class AlimentController extends Controller
 {
+
+    public function index(){
+        $ali = Aliment::all();
+
+        return view('/resultados/alimentacao_resultados', ['alimentacao'=> $ali]);
+    }
     public function store(Request $request){
         $ali = new Aliment;
         
@@ -16,7 +22,7 @@ class AlimentController extends Controller
         
         $ali->save();
 
-        return redirect('/');
+        return redirect('/resultados/alimentacao_resultados');
 
     }
 }
