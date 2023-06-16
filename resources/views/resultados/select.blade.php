@@ -2,9 +2,7 @@
 
 @section( 'title')
 
-@section('content')
-
-<form action="/resultados/relatorio" method="post">
+<form action="" method="post">
 
 <div class="row">
     <div class="col align-self-end">
@@ -23,6 +21,8 @@
 
     
 </div>
+
+
 </form>
 
 @endsection
